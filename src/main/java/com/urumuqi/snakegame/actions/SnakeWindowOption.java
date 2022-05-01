@@ -16,14 +16,31 @@ import java.awt.event.KeyListener;
  **/
 public class SnakeWindowOption extends JPanel implements ActionListener, KeyListener {
 
+    /**
+     * 上、下、左、右
+     */
     public static final int UP = 0, DOWN = 1, LEFT = 2, RIGHT = 3;
 
     public static final int GAME_LOC_X = 50, GAME_LOC_Y = 50, GAME_WIDTH = 700, GAME_HEIGHT = 500, SIZE = 10;
 
+    /**
+     * rx 起点x坐标
+     * ry 起点y坐标
+     * score 得分
+     * speed 移动速度
+     */
     public static int rx, ry, score = 0, speed = 5;
 
+    /**
+     * 暂停标记
+     */
     public boolean startFlag = false;
 
+    /**
+     * startBtn 开始
+     * stopBtn 暂停
+     * quitBtn 退出
+     */
     JButton startBtn, stopBtn, quitBtn;
 
     Snake snake;
