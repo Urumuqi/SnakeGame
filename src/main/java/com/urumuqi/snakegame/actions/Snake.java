@@ -137,7 +137,8 @@ public class Snake {
                     "The snake was so hungry that it ate itself",
                     "Message",
                     JOptionPane.ERROR_MESSAGE);
-            System.exit(1);
+            reset();
+            // System.exit(1);
         }
 
         if (eat) {
@@ -145,6 +146,19 @@ public class Snake {
             SnakeWindowOption.score ++;
             SnakeWindowOption.speed ++;
         }
+    }
+
+    /**
+     * 失败重置状态
+     */
+    public void reset() {
+        curDir = SnakeWindowOption.RIGHT;
+        snakeNodes = new ArrayList<>();
+        snakeNodes.add(new SnakeNode(370, 250));
+        snakeNodes.add(new SnakeNode(360, 250));
+        snakeNodes.add(new SnakeNode(350, 250));
+        SnakeWindowOption.speed = 5;
+        SnakeWindowOption.score = 0;
     }
 
     /**
